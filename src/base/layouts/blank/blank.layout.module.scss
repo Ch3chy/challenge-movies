@@ -1,0 +1,45 @@
+@use "@styles/mixins/responsive";
+
+.appContainer {
+  display: flex;
+  flex: 1;
+  flex-direction: column;
+
+  @include responsive.apply(md) {
+    align-items: stretch;
+    flex-direction: row;
+  }
+}
+
+.image {
+  height: 200px;
+  img {
+    display: block;
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+  }
+  .imageDesktop {
+    display: none;
+  }
+
+  @include responsive.apply(md) {
+    height: 100%;
+    width: 50%;
+    img {
+      display: none;
+    }
+    .imageDesktop {
+      display: block;
+    }
+  }
+}
+
+.content {
+  flex: 1;
+  padding: 2rem;
+
+  @include responsive.apply(md) {
+    padding: 4rem;
+  }
+}

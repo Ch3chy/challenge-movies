@@ -6,10 +6,7 @@ const Base: FC = () => {
   return (
     <div className={styles.principalMain}>
       <main className={styles.appContainer}>
-        <div className={styles.sideMenu}>Aqui va sidemenu</div>
-        <section className={styles.appMain}>
-          <Outlet />
-        </section>
+        <Outlet />
       </main>
     </div>
   );

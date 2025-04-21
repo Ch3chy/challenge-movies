@@ -1,0 +1,24 @@
+@use "@styles/mixins/responsive";
+
+.appContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  @include responsive.apply(lg) {
+    align-items: stretch;
+    flex-direction: row;
+  }
+}
+
+.sideMenu {
+  background-color: var(--Color-blue-500);
+  @include responsive.apply(lg) {
+    width: 200px;
+  }
+}
+
+.appMain {
+  flex: 1;
+  overflow: auto;
+}

@@ -21,23 +21,9 @@
   overflow: auto;
   width: 100%;
 
-  @include responsive.apply(lg) {
+  @include responsive.apply(md) {
     aspect-ratio: 16/9;
-    align-items: stretch;
     border-radius: 2rem;
-    flex-direction: row;
     min-height: 700px;
   }
-}
-
-.sideMenu {
-  background-color: var(--Color-blue-500);
-  @include responsive.apply(lg) {
-    width: 200px;
-  }
-}
-
-.appMain {
-  flex: 1;
-  overflow: auto;
 }
