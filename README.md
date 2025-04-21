@@ -1,54 +1,71 @@
-# React + TypeScript + Vite
+# Challenge Movies
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Instalación del Proyecto
 
-Currently, two official plugins are available:
+Para configurar y ejecutar el proyecto correctamente, sigue estos pasos:
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+### 📌 1. Clonar el repositorio
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```sh
+git clone https://github.com/Ch3chy/challenge-movies.git
+cd challenge-movies
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+### 📌 2. Instalar dependencias
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+Ejecuta el siguiente comando para instalar las dependencias necesarias:
 
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
+```sh
+npm install
 ```
+
+Este paso también instalará los **hooks de Git** mediante **Lefthook**.
+
+### 📌 3. Ejecutar el proyecto
+
+Para iniciar el entorno de desarrollo:
+
+```sh
+cd app
+npm run dev
+```
+
+---
+
+## 📖 Directrices para Commits (Conventional Commits)
+
+Este proyecto sigue el estándar **Conventional Commits** para mantener un historial de commits estructurado y legible.
+
+### 📌 Estructura del mensaje de commit
+
+```
+<tipo>: <descripción breve>
+```
+
+Ejemplo válido:
+
+```sh
+git commit -m "feat: proyecto base de vite con react"
+```
+
+### 📌 Tipos de commit permitidos
+
+- `feat` → Nueva funcionalidad.
+- `fix` → Corrección de errores.
+- `docs` → Cambios en documentación.
+- `style` → Cambios de formato (sin afectar código).
+- `refactor` → Refactorización sin cambiar funcionalidad.
+- `test` → Agregar o modificar pruebas.
+- `chore` → Tareas de mantenimiento.
+
+## 🛠 Configuración Manual de Lefthook (Opcional)
+
+Si los hooks no funcionan después de clonar el repo, instala Lefthook manualmente:
+
+```sh
+npx lefthook install
+```
+
+Esto asegurará que los hooks de Git estén correctamente configurados.
+
+---
