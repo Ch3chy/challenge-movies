@@ -12,7 +12,7 @@ const ProtectedLayout: FC = () => {
   const isAuthenticated = useBaseStore((state) => state.isAuthenticated());
 
   const footerMenu: MenuItemProps[] = [
-    { icon: "SignOut", path: "/users/logout", label: "Salir" },
+    { icon: "SignOut", path: "/logout", label: "Salir" },
   ];
 
   const menu = useMemo(() => {

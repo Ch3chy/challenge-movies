@@ -10,6 +10,7 @@ const BaseRoutes: FC = () => {
   );
 
   const Login = useLazyImport(() => import("@/modules/profile/views/login"));
+  const Logout = useLazyImport(() => import("@/modules/profile/views/logout"));
 
   return (
     <Routes>
@@ -19,6 +20,14 @@ const BaseRoutes: FC = () => {
           element={
             <Suspense>
               <Login />
+            </Suspense>
+          }
+        />
+        <Route
+          path="logout"
+          element={
+            <Suspense>
+              <Logout />
             </Suspense>
           }
         />
