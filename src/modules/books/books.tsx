@@ -1,8 +1,18 @@
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import { useBooksStore } from "./stores/useBooksStore";
+import { fetchBooks } from "./fetchs/books.fetchs";
 
 const Books: FC = () => {
   const books = useBooksStore((state) => state.books);
+
+  const loadBooks = async () => {
+    const books = await fetchBooks();
+    useBooksStore.setState({ books });
+  };
+
+  useEffect(() => {
+    loadBooks();
+  }, []);
 
   return (
     <div>
