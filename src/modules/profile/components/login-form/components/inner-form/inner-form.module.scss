@@ -1,0 +1,30 @@
+.customerForm {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  .label {
+    color: var(--Color-gray-400);
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+  .input {
+    background-color: var(--Color-white);
+    border: 1px solid var(--Color-gray-800);
+    border-radius: 0.5rem;
+    font-size: 1rem;
+    height: 46px;
+    outline: none;
+    padding: 0.75rem;
+  }
+  .error {
+    color: var(--Color-red-500);
+    font-size: 0.75rem;
+  }
+}
+
+.formSection {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}

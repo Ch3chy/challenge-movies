@@ -3,7 +3,7 @@ import styles from "./blank.layout.module.scss";
 import { Outlet } from "react-router-dom";
 import { BlankLayoutProps } from "./blank.types";
 
-const BlankLayout: FC<BlankLayoutProps> = ({ children }) => {
+const BlankLayout: FC<BlankLayoutProps> = ({ children, className }) => {
   return (
     <div className={styles.appContainer}>
       <div className={styles.image}>
@@ -19,7 +19,9 @@ const BlankLayout: FC<BlankLayoutProps> = ({ children }) => {
           className={styles.imageDesktop}
         />
       </div>
-      <div className={styles.content}>{children ? children : <Outlet />}</div>
+      <div className={`${styles.content} ${className || ""}`}>
+        {children ? children : <Outlet />}
+      </div>
     </div>
   );
 };

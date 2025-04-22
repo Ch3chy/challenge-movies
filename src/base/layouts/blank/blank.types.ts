@@ -1,4 +1,7 @@
+import { ReactNode } from "react";
+
 export interface BlankLayoutProps {
-  children?: React.ReactNode;
+  children?: ReactNode;
   image?: string;
+  className?: string;
 }
