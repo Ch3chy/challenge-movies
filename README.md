@@ -1,4 +1,6 @@
-# Challenge Movies
+# Challenge Books
+
+Aplicacion desarrollada como reto para el puesto de Frontend Developer en Tenpo
 
 ## 🚀 Instalación del Proyecto
 
