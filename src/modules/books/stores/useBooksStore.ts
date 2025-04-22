@@ -1,15 +1,15 @@
 import { create } from "zustand";
 import { createJSONStorage, persist } from "zustand/middleware";
-import { MoviesStore } from "../types/store.type";
+import { BooksStore } from "../types/store.type";
 
-export const useMoviesStore = create<MoviesStore>()(
+export const useBooksStore = create<BooksStore>()(
   persist(
     (set) => ({
-      movies: [],
-      setMovies: (movies) => set({ movies }),
+      books: [],
+      setBooks: (books) => set({ books }),
     }),
     {
-      name: "movies-storage",
+      name: "books-storage",
       storage: createJSONStorage(() => sessionStorage),
     }
   )

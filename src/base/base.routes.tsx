@@ -5,8 +5,8 @@ import useLazyImport from "./hooks/lazy-import.hook";
 import ProtectedLayout from "./layouts/protected";
 
 const BaseRoutes: FC = () => {
-  const MoviesRoutes = useLazyImport(
-    () => import("@/modules/movies/movies.routes")
+  const BooksRoutes = useLazyImport(
+    () => import("@/modules/books/books.routes")
   );
 
   const Login = useLazyImport(() => import("@/modules/profile/views/login"));
@@ -27,7 +27,7 @@ const BaseRoutes: FC = () => {
             path="books/*"
             element={
               <Suspense>
-                <MoviesRoutes />
+                <BooksRoutes />
               </Suspense>
             }
           />
