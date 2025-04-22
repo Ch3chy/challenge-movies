@@ -57,6 +57,29 @@ Este proyecto implementa `react-virtualized` para optimizar el rendimiento en li
 - **Experiencia de Usuario**: Mantiene una experiencia fluida incluso con grandes conjuntos de datos.
 - **Compatibilidad**: Funciona perfectamente con React y se integra bien con otras bibliotecas de UI.
 
+## 🚀 Mejoras Futuras
+
+El proyecto tiene varias áreas de mejora identificadas para futuras iteraciones:
+
+### 📌 Optimización de Rendimiento
+
+- **Implementación de Paginación**: 
+  - Dividir el listado de libros en páginas para reducir la carga inicial
+  - Implementar carga infinita (infinite scroll) para una mejor experiencia de usuario
+  - Optimizar las consultas a la API para cargar solo los datos necesarios
+
+### 📌 Funcionalidades Adicionales
+
+- **Sistema de Filtrado Avanzado**: 
+  - Permitir filtrar libros por múltiples criterios
+  - Implementar búsqueda por categorías y etiquetas
+  - Añadir filtros de fecha y popularidad
+
+### 📌 Mejoras de UX/UI
+
+- **Modo Oscuro**: Implementar un tema oscuro para mejorar la experiencia visual
+- **Animaciones y Transiciones**: Añadir micro-interacciones para mejorar la experiencia de usuario
+
 ---
 
 ## 📖 Directrices para Commits (Conventional Commits)
