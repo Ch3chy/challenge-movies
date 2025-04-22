@@ -1,5 +1,5 @@
 import { FC, Suspense } from "react";
-import { Route, Routes } from "react-router-dom";
+import { Navigate, Route, Routes } from "react-router-dom";
 import Base from "./base";
 import useLazyImport from "./hooks/lazy-import.hook";
 import ProtectedLayout from "./layouts/protected";
@@ -22,16 +22,18 @@ const BaseRoutes: FC = () => {
             </Suspense>
           }
         />
-        <Route path="/" element={<ProtectedLayout />}>
+        <Route path="*" element={<ProtectedLayout />}>
           <Route
-            path="/"
+            path="books/*"
             element={
               <Suspense>
                 <MoviesRoutes />
               </Suspense>
             }
           />
+          <Route path="*" element={<Navigate to="/books" replace />} />
         </Route>
+        <Route path="/" element={<Navigate to="/books" replace />} />
       </Route>
     </Routes>
   );
