@@ -25,9 +25,11 @@
 .appMain {
   background-color: var(--Color-gray-900);
   flex: 1;
+  height: calc(100vh - 2rem);
   overflow: auto;
   padding: 2rem 1rem;
   @include responsive.apply(md) {
+    height: 700px;
     padding: 4rem 1.5rem;
   }
 }

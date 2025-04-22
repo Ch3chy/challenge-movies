@@ -3,19 +3,19 @@
 .titleContainer {
   align-items: center;
   display: flex;
-  font-size: 1.375rem;
+  font-size: 1.75rem;
   justify-content: space-between;
 
   @include responsive.apply(md) {
-    font-size: 2rem;
+    font-size: 2.25rem;
   }
 }
 
 .title {
   color: var(--Color-black);
   font-size: 1em;
-  font-weight: 300;
+  font-weight: 600;
   strong {
-    font-weight: 600;
+    font-weight: 300;
   }
 }

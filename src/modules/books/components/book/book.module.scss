@@ -1,0 +1,56 @@
+@use "@styles/mixins/responsive";
+
+.book {
+  align-items: stretch;
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.75rem;
+  overflow: hidden;
+}
+
+.bookCover {
+  display: block;
+  height: 125px;
+  object-fit: cover;
+  width: 80px;
+
+  @include responsive.apply(md) {
+    height: 180px;
+    width: 120px;
+  }
+}
+
+.bookInfo {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.bookTitle {
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25em;
+
+  @include responsive.apply(md) {
+    font-size: 1.25rem;
+  }
+}
+
+.bookAuthor {
+  font-size: 0.875rem;
+  font-weight: 400;
+
+  @include responsive.apply(md) {
+    font-size: 1rem;
+  }
+}
+
+.bookYear {
+  background-color: var(--Color-yellow-500);
+  border-radius: 0.5rem;
+  color: var(--Color-gray-500);
+  font-size: 0.875rem;
+  font-weight: 600;
+  padding: 0.25rem 0.5rem;
+  width: fit-content;
+}

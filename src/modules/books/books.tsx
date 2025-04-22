@@ -1,13 +1,17 @@
 import { FC, useEffect } from "react";
 import { useBooksStore } from "./stores/useBooksStore";
 import { fetchBooks } from "./fetchs/books.fetchs";
+import Title from "@/base/components/title";
+import BookList from "./views/book-list";
+import styles from "./books.module.scss";
 
 const Books: FC = () => {
   const books = useBooksStore((state) => state.books);
+  const setBooks = useBooksStore((state) => state.setBooks);
 
   const loadBooks = async () => {
     const books = await fetchBooks();
-    useBooksStore.setState({ books });
+    setBooks(books);
   };
 
   useEffect(() => {
@@ -15,9 +19,13 @@ const Books: FC = () => {
   }, []);
 
   return (
-    <div>
-      <h1>Modulo Libros: {books.length}</h1>
-    </div>
+    <section className={styles.books}>
+      <div className={styles.booksHeader}>
+        <Title>Libros</Title>
+        <p>{books.length} items</p>
+      </div>
+      <BookList />
+    </section>
   );
 };
 
