@@ -118,4 +118,47 @@ npx lefthook install
 
 Esto asegurará que los hooks de Git estén correctamente configurados.
 
+## 🧪 Testing
+
+### 📌 Ejecución de Tests
+
+Para ejecutar los tests del proyecto, utiliza los siguientes comandos:
+
+```sh
+# Ejecutar todos los tests
+npm test
+```
+
+### 📌 Estrategia de Testing
+
+El proyecto implementa una estrategia de testing enfocada en los componentes base, asegurando su correcto funcionamiento y mantenibilidad:
+
+#### Componentes Base
+- **Button**: 
+  - Verifica el renderizado correcto
+  - Comprueba la aplicación de clases CSS
+  - Valida el manejo de estados (disabled)
+  - Prueba la funcionalidad de eventos (onClick)
+
+- **Icon**:
+  - Asegura el renderizado del icono correcto
+  - Verifica la aplicación de clases personalizadas
+  - Comprueba las propiedades por defecto (weight)
+
+- **Title**:
+  - Valida el renderizado del texto
+  - Verifica la aplicación de clases CSS
+  - Comprueba la propagación de props
+
+#### Beneficios de esta Estrategia
+- **Mantenibilidad**: Los tests aseguran que los componentes base funcionen correctamente después de cambios
+- **Documentación**: Los tests sirven como documentación viva del comportamiento esperado
+- **Calidad**: Ayuda a mantener un alto estándar de calidad en los componentes base
+- **Refactorización Segura**: Permite refactorizar con confianza, sabiendo que los tests detectarán regresiones
+
+### 📌 Herramientas Utilizadas
+- **Vitest**: Framework de testing rápido y moderno
+- **Testing Library**: Para pruebas centradas en el usuario
+- **JSDOM**: Para simular el entorno del navegador
+
 ---
