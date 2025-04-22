@@ -46,6 +46,17 @@ Este proyecto utiliza AWS Amplify para implementar un despliegue continuo (CI/CD
 
 La aplicación está disponible en: [https://main.d13t89n8eq8g4h.amplifyapp.com/](https://main.d13t89n8eq8g4h.amplifyapp.com/)
 
+## 📊 Optimización de Rendimiento con React Virtualized
+
+Este proyecto implementa `react-virtualized` para optimizar el rendimiento en listas y tablas grandes. Esta biblioteca es especialmente útil para manejar grandes conjuntos de datos de manera eficiente.
+
+### 📌 Ventajas de React Virtualized
+
+- **Rendimiento Mejorado**: Solo renderiza los elementos visibles en la ventana, reduciendo significativamente el uso de memoria y mejorando el rendimiento.
+- **Carga Rápida**: Ideal para listas con miles de elementos, ya que solo carga los elementos que el usuario puede ver.
+- **Experiencia de Usuario**: Mantiene una experiencia fluida incluso con grandes conjuntos de datos.
+- **Compatibilidad**: Funciona perfectamente con React y se integra bien con otras bibliotecas de UI.
+
 ---
 
 ## 📖 Directrices para Commits (Conventional Commits)

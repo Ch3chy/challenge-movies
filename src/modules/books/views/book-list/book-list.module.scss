@@ -1,5 +1,10 @@
 .bookList {
   display: flex;
+  flex: 1;
   flex-direction: column;
   gap: 1rem;
+
+  .bookItem {
+    background-color: var(--Color-gray-800);
+  }
 }
